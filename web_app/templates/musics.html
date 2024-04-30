@@ -1,0 +1,33 @@
+{% extends "bootstrap_5_layout.html" %}
+{% set page_title = "Musics Page" %}
+{% set active_page = "musics" %}
+
+{% block content %}
+
+    <h1>Musics</h1>
+
+    <p class="lead">This is the music page</p>
+
+    {% if musics|length > 0 %}
+
+        <ul>
+            {% for music in musics %}
+            
+            <li>
+
+                {{ music.title }} |  {{ music.composer }}
+
+
+            </li>
+
+
+            {% endfor %}
+        </ul> 
+
+    {% else %}
+
+        <p>Oops, no musics found.</p>
+
+    {% endif %}
+
+{% endblock %}

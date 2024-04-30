@@ -16,6 +16,7 @@ from web_app.routes.user_routes import user_routes
 from web_app.routes.product_routes import product_routes
 from web_app.routes.order_routes import order_routes
 from web_app.routes.food_routes import food_routes
+from web_app.routes.music_routes import music_routes
 
 load_dotenv()
 
@@ -72,6 +73,7 @@ def create_app():
     app.register_blueprint(product_routes)
     app.register_blueprint(order_routes)
     app.register_blueprint(food_routes)
+    app.register_blueprint(music_routes)
 
     return app
 
