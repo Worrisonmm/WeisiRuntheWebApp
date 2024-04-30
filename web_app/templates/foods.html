@@ -12,19 +12,21 @@
 
         <ul>
             {% for food in foods %}
-              <li>
-                {{food.name}} | {{food.type}}
+            
+            <li>
+
+                {{ food.name }}
 
 
+            </li>
 
 
-              </li>
             {% endfor %}
-        </ul>
+        </ul> 
 
     {% else %}
 
-        <p>Oops, no products found.</p>
+        <p>Oops, no foods found.</p>
 
     {% endif %}
 
