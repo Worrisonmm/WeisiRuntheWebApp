@@ -122,7 +122,7 @@ This should populate the sheet with the following records:
 
 > NOTE: see the contents of the ["app/models/product.py"](/app/models/product.py) file for more details, and feel free to customize the `SEEDS` as desired.
 
-### Web Application
+### Web Applications
 
 Run the local web server (then visit http://localhost:5000 in a browser):
 
