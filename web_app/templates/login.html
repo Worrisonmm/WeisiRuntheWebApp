@@ -2,6 +2,19 @@
 {% set page_title = "Login with Google" %}
 {% set active_page = "login" %}
 
+<head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-80WQDDJTCH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-80WQDDJTCH');
+    </script>
+    </head>
+
 {% block head %}
     <link rel="stylesheet" href="{{ url_for('static', filename='strike.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='google-login.css') }}">

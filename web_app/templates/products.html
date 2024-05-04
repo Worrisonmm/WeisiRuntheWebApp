@@ -1,26 +1,44 @@
 {% extends "bootstrap_5_layout.html" %}
-{% set page_title = "Foods Page" %}
-{% set active_page = "foods" %}
+{% set page_title = "Products Page" %}
+{% set active_page = "products" %}
 
 {% block content %}
 
-    <h1>Foods</h1>
+    <h1>Products</h1>
 
-    <p class="lead">This is the foods page</p>
+    <p class="lead">This is the products page</p>
 
-    {% if foods|length > 0 %}
+    {% if products|length > 0 %}
 
-        <ul>
-            {% for food in foods %}
-              <li>
-                {{food.name}} | {{food.type}}
+        <!--div class="container"-->
+        <div class="row">
+            {% for product in products %}
+                <div class="col">
+                    <div class="card" style="width: 18rem; margin-bottom: 20px;">
+                        <img class="card-img-top" src="{{ product.url }}" alt="an image of '{{ product.name }}'">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ product.name }}</h5>
+                            <p class="card-text">{{ product.description }}</p>
+
+                            <!--button class="btn btn-primary">Order now!</button-->
+
+                            <!-- CREATE ORDER -->
+                            <form method="POST" action="/user/orders/create" style="display: inline;">
+                                <input type="hidden" name="product_id" value="{{ product.id }}">
+                                <input type="hidden" name="product_name" value="{{ product.name }}">
+                                <input type="hidden" name="product_description" value="{{ product.description }}">
+                                <input type="hidden" name="product_price" value="{{ product.price }}">
+                                <input type="hidden" name="product_url" value="{{ product.url }}">
+                                <button type="submit" class="btn btn-outline-primary">Order now!</button>
+                             </form>
 
 
-
-
-              </li>
+                        </div>
+                    </div>
+                </div>
             {% endfor %}
-        </ul>
+        </div>
+        <!--/div-->
 
     {% else %}
 
