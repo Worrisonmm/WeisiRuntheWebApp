@@ -8,10 +8,20 @@ class Food(BaseModel):
 
     SEEDS = [
         {"name": "Chow Mien", "type": "Entree"},
-        {"name": "Pudding", "type": "Dessert"},
+        {"name": "Sandwich", "type": "Entree"},
         {"name": "Steak", "type": "Entree"},
+        {"name": "BAJA Fish Taco", "type": "Entree"},
+        {"name": "Whiting Fish Nuggets", "type": "Entree"},
+        {"name": "Hot Pot", "type": "Entree"},
+        {"name": "Beef Kidney", "type": "Side"},
+        {"name": "Hush Puppies", "type": "Side"},
+        {"name": "Pudding", "type": "Dessert"},
         {"name": "Cheese Cake", "type": "Dessert"},
-        {"name": "Pasta", "type": "Entree"},
+        {"name": "Carrot Cake", "type": "Dessert"},
+    
+       
+        
+
        
     ]
 
