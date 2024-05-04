@@ -1,0 +1,2 @@
+
+<img src="{{url_for('static', filename='images/Sunday.jpeg')}}" alt="Relaxing Sunday">
